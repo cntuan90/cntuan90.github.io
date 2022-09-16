@@ -1,38 +1,182 @@
 .App {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #282c34;
+  animation: 0.5s ease-in-out 0s 1 normal none running expand;
+}
+
+.App-container {
+  flex-basis: 100%;
+  max-width: 30em;
+  margin: auto;
+  color: white;
+  padding: 1em;
+  border: 2px solid rgb(10, 224, 223);
+  box-shadow: rgb(81, 94, 94) 0px 0px 3px 1px, rgb(18 160 160) 0px 0px 3px 1px inset;
+}
+
+.App-group {
+  display: flex;
+}
+
+.App-group-1 {
+  position: relative;
+  margin: 0px;
+  flex-basis: 33.3%;
+  align-self: center;
+}
+
+.App-item-1 {
+  position: absolute;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent rgb(10, 224, 223);
+  border-image: initial;
+  border-radius: 50%;
+  top: -12px;
+  left: -12px;
+  animation-duration: 2s;
+  animation-name: rotate-anticlock;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.App-item-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgb(10, 224, 223) transparent transparent;
+  border-image: initial;
+  border-radius: 50%;
+  top: -6px;
+  left: -6px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: rotate-clock;
+  /* transform: rotate(45deg); */
+  rotate: 45deg;
+  transition: rotate 1s;
+}
+
+.App-img {
+  display: block;
+  max-width: 100%;
+  border-radius: 50%;
+  box-shadow: rgb(18 160 160) 0px 0px 4px 3px;
+}
+
+.App-group-2 {
+  position: relative;
+  flex-basis: 66.6%;
+  padding: 1em;
+  font-family: Orbitron, sans-serif;
+  text-shadow: rgb(18 160 160) 0px 0px 4px;
+  letter-spacing: 1px;
+}
+
+.App-group-2-h1 {
+  display: inline-block;
+  margin: 0px;
+}
+
+.App-group-2 h1 {
+  font-size: 2em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.App-group-2-span{
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 1000;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-name: opacity;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.category a {
+  font-size: 10px;
+}
+
+.group-category {
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: opacity;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 70%;
+}
+
+.group-category img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.group-category p {
+  display: inline-block;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-view-all{
+  color: rgb(153, 153, 153);
+  text-decoration: none;
+  margin-right: 5px;
+  box-sizing: border-box;
+  width: 30%;
+  font-size: 13px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.media{
+  color: rgb(153, 153, 153);
+  text-decoration: none;
+  font-size: 0.75rem;
+  margin-right: 5px;
+  box-sizing: border-box;
+  font-size: 13px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
+@keyframes rotate-anticlock {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate-clock {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
