@@ -3,7 +3,6 @@
   height: 100vh;
   width: 100%;
   background-color: #282c34;
-  animation: 0.5s ease-in-out 0s 1 normal none running expand;
 }
 
 .App-container {
@@ -14,6 +13,7 @@
   padding: 1em;
   border: 2px solid rgb(10, 224, 223);
   box-shadow: rgb(81, 94, 94) 0px 0px 3px 1px, rgb(18 160 160) 0px 0px 3px 1px inset;
+  animation: 0.5s ease-in-out 0s 1 normal none running expand;
 }
 
 .App-group {
@@ -152,6 +152,12 @@
   margin-right: 5px;
   box-sizing: border-box;
   font-size: 13px;
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(0);
+  }
 }
 
 @keyframes rotate-anticlock {
