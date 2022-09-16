@@ -1,4 +1,6 @@
 import './App.css';
+import Avatar from './assests/avatar.jpeg';
+import Logo from './assests/favicon.ico';
 
 function App() {
   return (
@@ -8,14 +10,14 @@ function App() {
           <div className='App-group-1'>
             <div className='App-item-1'></div>
             <div className='App-item-2'></div>
-            <img src="/avatar.jpeg" alt='logo' className='App-img' style={{ objectFit: 'cover' }} />
+            <img src={Avatar} alt='logo' className='App-img' />
           </div>
           <div className='App-group-2'>
             <h1 className='App-group-2-h1'>Cao Ngoc Tuan</h1>
             <span className='App-group-2-span'>_</span>
             <div className='category'>
               <div className='group-category'>
-                <img src="/favicon.ico" alt="react" />
+                <img src={Logo} alt="react" />
                 <p>Frontend Developer</p>
               </div>
               <a href='https://gist.github.com/cntuan90/fe676663500e76dab12f76ed12ee7562' className="App-view-all">View All</a>

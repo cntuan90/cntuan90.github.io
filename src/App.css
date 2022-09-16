@@ -59,9 +59,8 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: rotate-clock;
-  /* transform: rotate(45deg); */
-  rotate: 45deg;
-  transition: rotate 1s;
+  /* rotate: 45deg;
+  transition: rotate 1s; */
 }
 
 .App-img {
