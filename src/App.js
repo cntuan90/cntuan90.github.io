@@ -24,7 +24,7 @@ function App() {
             </div>
 
             <div>
-              <a href='www.linkedin.com/in/ngoc-tuan-cao-68b586a4' rel='Linkedin' className="media">Linkedin</a>
+              <a href='https://www.linkedin.com/in/ngoc-tuan-cao-68b586a4/' rel='Linkedin' className="media">Linkedin</a>
               <a href='https://github.com/cntuan90' rel='Github' className="media">Github</a>
               <a href='https://gitlab.com/cntuan90' rel='Gitlab' className="media">Gitlab</a>
               <a href='https://www.facebook.com/cntuan90/' rel='facebook' className="media">Facebook</a>
